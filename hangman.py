@@ -10,7 +10,7 @@ def fetch():
 # print the automatic word 
 if __name__ == "__main__":
     letters_missed = set() # keeps track of letters entered
-    attempts = 5 # attempts to guess word
+    attempts = 6 # attempts to guess word
     word = fetch() # stores word from api
     found = [0] * len(word) # initializes empty array the length of the word
 
