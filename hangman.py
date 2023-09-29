@@ -30,8 +30,9 @@ if __name__ == "__main__":
         letter = input("Enter letter: ")
         # first check letter is a letter
         if letter.isalpha():
+            letter = letter.lower()
             # if letter not in word add to letters missed and subtract attempt
-            if letter not in word:
+            if letter not in word and letter not in letters_missed:
                 letters_missed.add(letter)
                 attempts -= 1
                 #TODO: When does game over happen???
