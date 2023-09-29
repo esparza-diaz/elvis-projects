@@ -14,13 +14,11 @@ if __name__ == "__main__":
     word = fetch() # stores word from api
     found = [0] * len(word) # initializes empty array the length of the word
 
-    print(word) # print the word for now for testing. once testing is done delete this line. TODO
-
     while True:
         # create the output string based on letters found 
         output = ""
-        for a in found:
-            if a == 0:
+        for a in range(0,len(found)):
+            if found[a] == 0:
                 output = output + "_ "
             else:
                 output = output + str(found[a]) + " "
@@ -36,9 +34,19 @@ if __name__ == "__main__":
                 letters_missed.add(letter)
                 attempts -= 1
                 #TODO: When does game over happen???
+                if attempts == 0:
+                    print("GAMEOVER! WORD WAS: " + word)
+                    break
             else:
                 #TODO: What to do if letter is in word???? 
-                print("???")
+                if letter in word:
+                    for i in range(0,len(word)):
+                        if word[i] == letter:
+                            found[i] = letter
+
+                if 0 not in found:
+                    print("CONGRATULATIONS")
+                    break
         else:
             print("Invalid Input")
 
