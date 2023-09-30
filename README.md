@@ -1,3 +1,3 @@
 # projects
-# hangman : python3 hangman.py
+# hangman : python3 ./fun/hangman.py
 
