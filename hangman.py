@@ -45,7 +45,7 @@ if __name__ == "__main__":
                             found[i] = letter
 
                 if 0 not in found:
-                    print("CONGRATULATIONS")
+                    print("CONGRATULATIONS! WORD WAS: " + word)
                     break
         else:
             print("Invalid Input")
